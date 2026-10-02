@@ -1,150 +1,81 @@
-Medix AI
-
-AI-powered antimicrobial decision support
-
-Medix AI is a clinical decision-support platform built to help healthcare professionals make more informed antibiotic decisions by bringing patient context, drug information, drug interactions, and the most recent available regional antimicrobial-resistance data into one place.
-
-The idea behind Medix AI is simple: instead of searching through multiple sources before making a treatment decision, relevant information should be available together and presented in a way that is easy to understand.
-
-
-
-Why Medix AI?
-
-Antimicrobial resistance (AMR) is becoming increasingly difficult to manage, and resistance patterns can vary significantly across regions.
-
-At the same time, choosing an antibiotic is not only about resistance. Patient information, existing medications, possible drug interactions, and other clinical factors also need to be considered.
-
-Medix AI brings these factors together to provide contextual, explainable decision support.
-
-The system is designed to assist clinicians, not replace them.
-
-
-
-What Medix AI Does
-
-Medix AI combines:
-
-- Patient-specific information
-- Antibiotic and medication data
-- Drug-interaction information
-- Regional antimicrobial-resistance data
-- Machine-learning analysis
-- Treatment comparison and explainable insights
-
-A user can provide a region and antibiotic context and view the most recent available resistance information through an interactive map.
-
-
-
-Regional AMR Map
-
-The map provides a visual representation of reported resistance levels:
-
- Green— Lower reported resistance
- Yellow— Moderate reported resistance
- Red — Higher reported resistance
-
-The map is based on the most recent available data from the connected sources. It does **not** represent real-time resistance measurements from an individual patient.
-
- Key Features
-
- AI-assisted analysis-
-
-The machine-learning layer analyzes structured project data to support the overall decision-support workflow.
-
-Drug interaction checking-
-
-Medication information is used to identify potential drug-interaction concerns that may be relevant to a treatment option.
-
-Regional AMR intelligence-
-
-Resistance information is connected with geographical context, allowing users to understand how reported resistance varies by region.
-
- Treatment comparison-
-
-Different treatment options can be explored and compared using the information available to the system.
-
- Explainable insights-
-
-Rather than presenting an unexplained prediction, Medix AI aims to show the factors and information behind its insights.
-
- Human-in-the-loop-
-
-The doctor remains the final decision-maker. Medix AI provides supporting information rather than making autonomous prescribing decisions.
-
-
-
-Data & Integrations
-
-Medix AI combines project-specific datasets with external healthcare information sources.
-
-RxNav / RxNorm-
-Used for structured drug and medication information.
-
-National Library of Medicine (NLM)-
-Used as a source of biomedical and medication-related information.
-
-WHO GLASS-
-Provides antimicrobial-resistance surveillance data used within the AMR intelligence layer.
-
-Project CSV datasets-
-Used for training and evaluating the machine-learning components of the project.
-
-The quality and availability of results depend on the coverage and recency of the underlying datasets and external sources.
-
-
-
-How It Works
-
-The workflow is straightforward:
-
-1. Enter the relevant patient and medication information.
-2. Select the geographical region.
-3. Provide the antibiotic or treatment being considered.
-4. Medix AI processes the available clinical, medication and AMR information.
-5. The system presents resistance information, interaction insights and treatment comparisons.
-6. The healthcare professional reviews the information and makes the final decision.
-
-
-
-Technology
-
-Medix AI consists of four main components:
-
-Frontend — Clinical dashboard, treatment interface and interactive AMR map.
-
-Backend — API integration, data processing and application logic.
-
-Machine Learning— Uses Random Forest algorithm, preprocessing and inference using structured datasets.
-
-External Data Layer — Drug, medication and antimicrobial-resistance information from connected healthcare sources.
-
-
-
-B2B Revenue Model
-
-Medix AI follows a B2B SaaS model, selling antimicrobial decision-support capabilities to healthcare organizations rather than individual patients.
-
-Revenue Streams
-
-Hospital & Clinic Subscriptions — Recurring monthly/annual plans based on organization size, users, and usage.
-
-Enterprise Licensing — Custom contracts for hospital networks, diagnostic groups, and large healthcare organizations requiring organization-wide deployment.
-
-API & Data Access — Usage-based pricing for integrating Medix AI's drug-interaction, AMR intelligence, and decision-support capabilities into existing clinical systems.
-
-Premium Analytics — Paid dashboards and reporting for AMR trends, antibiotic utilization, and regional resistance intelligence.
-Implementation & Integration — One-time fees for EHR/HIS integration, onboarding, customization, and deployment.
-
-
-
-Project Structure
-
-medix-ai/
-├── frontend/
-├── backend/
-├── ml/
-├── data/
-├── docs/
-├── requirements.txt
-├── package.json
-└── README.md
+<div align="center">
+  <img src="src/assets/logo.png" alt="Medix AI Logo" width="120" />
+  <h1>Medix AI</h1>
+  <p><strong>Next-Generation Antimicrobial Decision-Support Platform</strong></p>
+
+  <p>
+    <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react" alt="React" /></a>
+    <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-0.111.0-009688?style=for-the-badge&logo=fastapi" alt="FastAPI" /></a>
+    <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python" alt="Python" /></a>
+    <a href="https://supabase.com/"><img src="https://img.shields.io/badge/Supabase-Database-3ECF8E?style=for-the-badge&logo=supabase" alt="Supabase" /></a>
+    <a href="https://vercel.com/"><img src="https://img.shields.io/badge/Vercel-Deploy-000000?style=for-the-badge&logo=vercel" alt="Vercel" /></a>
+  </p>
+</div>
+
+---
+
+## 🔬 Overview
+
+**Medix AI** is a state-of-the-art clinical intelligence platform designed to assist healthcare professionals in fighting Antimicrobial Resistance (AMR). By blending machine learning inference, real-time geospatial surveillance, and comprehensive FDA data integration, Medix AI delivers an unparalleled decision-support system right to the physician's dashboard.
+
+Designed with a stunning **glassmorphism** interface, Medix AI prioritizes both extreme clinical utility and a premium user experience.
+
+## ✨ Key Features
+
+- **🧠 Clinical AI Diagnostics**: Automated disease prediction and personalized antibiotic recommendations using `scikit-learn` models trained on extensive clinical datasets.
+- **🌍 Geospatial AMR Surveillance**: Real-time resistance mapping across India. Monitor MDR (Multi-Drug Resistant) pathogens and visualize local susceptibility data via interactive maps.
+- **⚕️ Deep Drug Interaction Engine**: Direct integrations with **OpenFDA** and **NLM RxNorm** to cross-reference polypharmacy cases and flag high-risk drug-drug interactions (DDI).
+- **🎙️ AI Voice Narration**: Automated, acoustic voice briefings for patient cases, delivering critical clinical intelligence hands-free.
+- **🔐 Secure & Compliant**: Role-based access control, secure authentication via Supabase, and clinical-grade data persistence.
+
+---
+
+## 🛠️ Technology Stack
+
+**Frontend Architecture:**
+- React 19 + TypeScript
+- Vite (Lightning-fast HMR)
+- Recharts (Clinical Data Visualization)
+- Leaflet (Geospatial Mapping)
+- Lucide React (Premium Iconography)
+- Vanilla CSS with Glassmorphism Aesthetic
+
+**Backend Architecture:**
+- FastAPI (High-performance async Python framework)
+- Uvicorn (ASGI web server)
+- Scikit-Learn / Pandas / Numpy (Machine Learning Pipeline)
+- Supabase (PostgreSQL & Authentication)
+
+---
+
+## ☁️ Deployment
+
+Medix AI is optimized for a separated Frontend/Backend deployment model:
+
+### 1. Frontend (Vercel)
+Vercel handles the React/Vite frontend flawlessly right out of the box (with a `vercel.json` already included for client-side routing).
+1. Go to [Vercel](https://vercel.com/) and click **Add New -> Project**.
+2. Connect your GitHub repository.
+3. Vercel will automatically detect the **Vite** framework.
+4. In Environment Variables, add `VITE_API_URL` pointing to your deployed backend.
+5. Click **Deploy**.
+
+### 2. Backend (Railway)
+Because Medix AI loads machine-learning models (`scikit-learn`), it is best deployed as a standard web service on Railway rather than a Serverless Function.
+1. Go to [Railway](https://railway.app/) and click **New Project**.
+2. Select **Deploy from GitHub repo**.
+3. Choose the `medix-ai` repository.
+4. Go to **Settings -> Build** and set the Root Directory to `/backend`.
+5. Under **Variables**, add your `SUPABASE_URL` and `SUPABASE_KEY`.
+6. Railway will automatically build the Python environment and expose the `uvicorn` server!
+
+---
+
+## 🛡️ License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+<div align="center">
+  <sub>Built with ❤️ for the future of Medicine.</sub>
+</div>

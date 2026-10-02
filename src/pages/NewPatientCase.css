@@ -1,0 +1,282 @@
+.case-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.case-code-badge {
+  background: rgba(0, 217, 255, 0.1);
+  border: 1px solid var(--color-accent-primary);
+  color: var(--color-accent-primary);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+.bg-transparent option {
+  background-color: var(--color-bg-secondary);
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tag-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-primary);
+}
+
+.tag-btn.add-new {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-style: dashed;
+  color: var(--color-accent-primary);
+  border-color: rgba(0, 217, 255, 0.3);
+}
+.tag-btn.add-new:hover {
+  background: rgba(0, 217, 255, 0.1);
+  border-color: var(--color-accent-primary);
+}
+
+.analyze-btn {
+  padding: 16px 48px;
+  font-size: 1.2rem;
+  font-family: var(--font-heading);
+  border-radius: 32px;
+}
+
+/* AI Overlay */
+.ai-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(7, 26, 46, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-processing-box {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--color-ai-accent);
+  box-shadow: 0 0 40px rgba(123, 97, 255, 0.2);
+}
+
+.workflow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  text-align: left;
+}
+
+.workflow-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+  opacity: 0.5;
+}
+
+.workflow-step.active {
+  opacity: 1;
+  background: rgba(123, 97, 255, 0.1);
+  border: 1px solid rgba(123, 97, 255, 0.3);
+  color: var(--color-text-primary);
+  transform: translateX(10px);
+}
+
+.workflow-step.completed {
+  opacity: 0.8;
+  background: rgba(24, 195, 126, 0.1);
+  border: 1px solid rgba(24, 195, 126, 0.3);
+  color: var(--color-success);
+  transform: translateX(0);
+}
+
+.step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Results */
+.recommendation-card {
+  padding: 24px;
+}
+.recommendation-card.border-accent {
+  border: 1px solid var(--color-accent-primary);
+  box-shadow: 0 8px 32px rgba(0, 217, 255, 0.1);
+}
+
+.rec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rank-badge {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.rank-badge.primary { background: var(--color-accent-primary); color: #000; }
+.rank-badge.alt { background: rgba(255, 255, 255, 0.1); color: var(--color-text-secondary); }
+
+.stat-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stat-pill .label { font-size: 0.7rem; color: var(--color-text-secondary); text-transform: uppercase; }
+.stat-pill .val { font-size: 1.1rem; font-weight: 700; }
+
+.info-block {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px;
+  border-radius: 8px;
+}
+.info-block .label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+.info-block p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.detail-row:last-child { border-bottom: none; }
+.detail-row span:first-child { color: var(--color-text-secondary); font-size: 0.9rem; }
+.detail-row span:last-child { font-weight: 500; font-size: 0.95rem; }
+
+.disclaimer-alert {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: rgba(255, 200, 87, 0.1);
+  border: 1px solid rgba(255, 200, 87, 0.3);
+  border-radius: 12px;
+  margin-top: 24px;
+}
+.disclaimer-alert p {
+  color: var(--color-warning);
+  margin: 0;
+}
+
+/* Feature 2: "Why This Drug?" Rationale Button & Equalizer */
+.hear-rationale-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 217, 255, 0.08);
+  border: 1px solid rgba(0, 217, 255, 0.35);
+  color: var(--color-accent-primary);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.hear-rationale-btn:hover {
+  background: rgba(0, 217, 255, 0.18);
+  border-color: var(--color-accent-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.2);
+}
+
+.hear-rationale-btn.active {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.25), rgba(123, 97, 255, 0.25));
+  border-color: var(--color-accent-primary);
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(0, 217, 255, 0.4);
+}
+
+.equalizer-wave {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  height: 14px;
+}
+
+.equalizer-bar {
+  width: 2.5px;
+  background: var(--color-accent-primary);
+  border-radius: 2px;
+  animation: eqPulse 0.8s ease-in-out infinite;
+}
+
+.equalizer-bar:nth-child(1) { height: 6px; animation-delay: 0.1s; }
+.equalizer-bar:nth-child(2) { height: 12px; animation-delay: 0.25s; }
+.equalizer-bar:nth-child(3) { height: 8px; animation-delay: 0.4s; }
+
+@keyframes eqPulse {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1.1); }
+}
+
+.rec-rationale-live-box {
+  background: rgba(0, 217, 255, 0.05);
+  border: 1px solid rgba(0, 217, 255, 0.25);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-top: 10px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #e2e8f0;
+  animation: fadeInModal 0.2s ease-out;
+}
+

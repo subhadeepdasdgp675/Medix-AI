@@ -1,0 +1,18 @@
+{
+    "clinical_datasets": [
+        {
+            "name": "real_disease_symptoms_and_history",
+            "file": "data/dataset.csv",
+            "preprocess_script": "preprocess.preprocess_clinical",
+            "active": true
+        }
+    ],
+    "amr_datasets": [
+        {
+            "name": "real_amr_multiresistance_and_glass",
+            "file": "data/amr_global_regional_resistance_2016_2023.csv",
+            "preprocess_script": "preprocess.preprocess_glass",
+            "active": true
+        }
+    ]
+}
