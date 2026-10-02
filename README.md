@@ -4,7 +4,7 @@ AI-powered antimicrobial decision support
 
 Medix AI is a clinical decision-support platform built to help healthcare professionals make more informed antibiotic decisions by bringing patient context, drug information, drug interactions, and the most recent available regional antimicrobial-resistance data into one place.
 
-The idea behind Medix is simple: instead of searching through multiple sources before making a treatment decision, relevant information should be available together and presented in a way that is easy to understand.
+The idea behind Medix AI is simple: instead of searching through multiple sources before making a treatment decision, relevant information should be available together and presented in a way that is easy to understand.
 
 
 
@@ -139,7 +139,6 @@ Implementation & Integration — One-time fees for EHR/HIS integration, onboardi
 
 Project Structure
 
-```text
 medix-ai/
 ├── frontend/
 ├── backend/
