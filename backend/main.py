@@ -44,6 +44,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+async def root():
+    return {"status": "ok", "message": "Medix AI Backend is online"}
+
+@app.get("/api/health")
+async def health_check():
+    return {"status": "healthy", "service": "medix-ai-backend"}
+
+
 # Load Models and Artifacts
 base_dir = os.path.dirname(__file__)
 CLINICAL_MODEL_PATH = os.path.join(base_dir, 'models', 'clinical_model.pkl')
