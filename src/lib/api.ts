@@ -1,7 +1,7 @@
-// Point to active backend port 8080 or deployed backend via VITE_API_URL
-export const API_BASE = import.meta.env.VITE_API_URL || ((typeof window !== 'undefined' && window.location.port && window.location.port !== '8080')
+// Point to active backend (Railway in production, or localhost:8080 in dev)
+export const API_BASE = import.meta.env.VITE_API_URL || ((typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'))
   ? 'http://localhost:8080'
-  : '');
+  : 'https://medix-ai-production-eca9.up.railway.app');
 
 
 export function getAuthToken(): string | null {
