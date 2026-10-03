@@ -149,3 +149,12 @@ medix-ai/
 ├── requirements.txt
 ├── package.json
 └── README.md
+
+
+
+
+THIS IS MY DEPLOYED PROJECT LINK :-https://medix-ai-ch6o-git-main-debuggers-united2.vercel.app
+
+THANKS FOR VISITING US. 
+       REGARDS
+              DEBUGGERS UNITED.
