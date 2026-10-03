@@ -4,6 +4,7 @@ import { Stethoscope, Dna, Activity, Lock, Mail, User, Hash, CheckCircle, Shield
 import './Login.css';
 import { GlassCard } from '../components/GlassCard';
 import { setAuthToken, API_BASE } from '../lib/api';
+import logoImg from '../assets/logo.png';
 
 export function Login() {
   const [isLogin, setIsLogin] = useState(true);
@@ -112,7 +113,7 @@ export function Login() {
     <div className="login-container">
       <div className="login-left">
         <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <img src="/src/assets/logo.png" alt="Medix AI Logo" className="logo-icon" style={{ height: '48px', width: 'auto' }} />
+          <img src={logoImg} alt="Medix AI Logo" className="logo-icon" style={{ height: '48px', width: 'auto' }} />
           <h2 className="hero-heading" style={{ fontSize: '2rem', margin: 0 }}>MEDIX AI</h2>
         </div>
         

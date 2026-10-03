@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, FileText, Activity, Map, FileStack, Settings, Stethoscope, LogOut } from 'lucide-react';
 import { clearAuth } from '../lib/api';
+import logoImg from '../assets/logo.png';
 import './Sidebar.css';
 
 const navItems = [
@@ -24,7 +25,7 @@ export function Sidebar() {
   return (
     <aside className="sidebar glass-panel">
       <div className="sidebar-header">
-        <img src="/src/assets/logo.png" alt="Medix AI Logo" className="logo-icon" style={{ height: '32px', width: 'auto', marginRight: '4px' }} />
+        <img src={logoImg} alt="Medix AI Logo" className="logo-icon" style={{ height: '32px', width: 'auto', marginRight: '4px' }} />
         <h2 className="hero-heading">MEDIX AI</h2>
       </div>
       
